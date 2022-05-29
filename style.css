@@ -1,0 +1,30 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face{
+    font-family: "Extros";
+    src: url("/fonts/Extros\ Backstage.ttf") format("truetype");
+  }
+
+:root {
+    font-size: 62.5%;
+}
+
+body {
+    display: flex;
+    background: #101010;
+    font-family: "Extros";
+}
+
+form {
+    color: #fff;
+    font-size: 1.4rem;
+    border: 1px solid red;
+}
+
+form table tr td select {
+    font-family: "Extros";
+}
