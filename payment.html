@@ -8,7 +8,7 @@
   <body>
     <header id="home" >
       <div class="wrapper">
-        <a class="logo" href="/index.html">
+        <a class="logo" href="#">
           <svg
             width="158"
             height="33"
@@ -36,10 +36,10 @@
           <ul>
             <li>
               <a 
-                href="/index.html" 
+                href="#home" 
                 style="text-transform: uppercase;">home
               </a>
-                <a href="/payment.html" 
+                <a href="#payment" 
                 style="text-transform: uppercase;">Payment
               </a>
               <a
@@ -56,19 +56,85 @@
         </div>
       </div>
     </header>
-    <section id="about">
-      <h3 
-        class="text" 
-        style="text-transform: uppercase;">
-        About us
-      </h3>
-      <p
-        class="text" 
-        style="text-transform: uppercase; margin-top: 1.5rem;">
-        Translation of<br> Japanese manga<br> and novels
-      </p>
+    <section id="#payment">
+      <div class="wrapper">
+        <p 
+          class="text"
+          style="text-transform: uppercase; margin-bottom: 1.5rem;">
+          Join our discord<br> server and follow<br> the instructions for<br> the requests.
+        </p>
+        <form
+          action="https://www.paypal.com/cgi-bin/webscr"
+          method="post"
+          target="_top"
+        >
+          <input type="hidden" name="cmd" value="_s-xclick" />
+          <input type="hidden" name="hosted_button_id" value="6ZLPFMAYRN282" />
+          <table>
+            <tr>
+              <td>
+               <h3 class="text" style="text-transform: uppercase;">PAYMENT</h3>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <select id="os2" onchange="select_moeda()" class="selector">
+                  <option value="dollar" selected>DOLLAR</option>
+                  <option value="euro">EURO</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td><input type="hidden" name="on0" value="PAGES" />PAGES</td>
+            </tr>
+            <tr>
+              <td>
+                <select name="os0" class="selector">
+                  <option value="Option 1">$5,00 USD</option>
+                  <option value="Option 2">$10,00 USD</option>
+                  <option value="Option 3">$15,00 USD</option>
+                  <option value="Option 4">$20,00 USD</option>
+                  <option value="Option 5">$25,00 USD</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td><input type="hidden" name="on1" value="PROJECT" />PROJECTS</td>
+            </tr>
+            <tr>
+              <td>
+                <select name="os1" class="selector">
+                  <option value="MANGA">MANGA</option>
+                  <option value="NOVELS">NOVELS</option>
+                </select>
+              </td>
+            </tr>
+          </table>
+          <input type="hidden" name="currency_code" value="USD" />
+          <button id="comprar" name="submit" alt="PayPal - The safer, easier way to pay online!">
+            <svg
+              width="162"
+              height="60"
+              viewBox="0 0 162 60"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1 0.5H0.5V1V4.625V5.125H1H17H17.5V4.625V1V0.5H17H1ZM8.31429 7.75H8.00649L7.86787 8.02481L0.553581 22.5248L0.5 22.631V22.75V51.75V52.25H1H153.229H153.528L153.669 51.9862L161.441 37.4862L161.5 37.3755V37.25V8.25V7.75H161H8.31429ZM145 54.875H144.5V55.375V59V59.5H145H161H161.5V59V55.375V54.875H161H145Z"
+                fill="url(#paint0_linear_48_9)"
+                stroke="#7EADD8"
+              />
+              <path
+                d="M42.5879 39.6875V30.5H37.3379V39.6875H42.5879ZM42.5879 29.1875V21.3125H37.3379V29.1875H42.5879ZM36.0254 41V20H42.5879C42.9502 20 43.2578 20.1299 43.5107 20.3896C43.7705 20.646 43.9004 20.9536 43.9004 21.3125V29.1875C43.9004 29.3687 43.8354 29.5242 43.7056 29.6541C43.5757 29.7805 43.4219 29.8438 43.2441 29.8438C43.4219 29.8438 43.5757 29.9087 43.7056 30.0386C43.8354 30.1685 43.9004 30.3223 43.9004 30.5V39.6875C43.9004 40.0532 43.7705 40.3625 43.5107 40.6155C43.2544 40.8718 42.9468 41 42.5879 41H36.0254ZM49.3145 41C48.9521 41 48.6428 40.8718 48.3865 40.6155C48.1301 40.3625 48.002 40.0532 48.002 39.6875V20H49.3145V39.6875H54.5645V20H55.877V39.6875C55.877 40.0532 55.7471 40.3625 55.4873 40.6155C55.231 40.8718 54.9233 41 54.5645 41H49.3145ZM64.1672 27.7827L66.6384 20H67.9509L64.8235 29.8489L61.291 40.9692H59.9785L63.511 29.8489L60.3835 20H61.696L64.1672 27.7827ZM83.3369 24.199V41H82.0244V20H83.3369L88.5869 36.801V20H89.8994V41H88.5869L83.3369 24.199ZM100.563 39.6875V21.3125H95.3135V39.6875H100.563ZM95.3135 41C94.9512 41 94.6418 40.8718 94.3855 40.6155C94.1292 40.3625 94.001 40.0532 94.001 39.6875V21.3125C94.001 20.9536 94.1292 20.646 94.3855 20.3896C94.6384 20.1299 94.9478 20 95.3135 20H100.563C100.926 20 101.233 20.1299 101.486 20.3896C101.746 20.646 101.876 20.9536 101.876 21.3125V39.6875C101.876 40.0532 101.746 40.3625 101.486 40.6155C101.23 40.8718 100.922 41 100.563 41H95.3135ZM107.29 20L111.448 41H110.135L105.978 20H107.29ZM114.375 32.925L112.776 41H111.463L113.704 29.6746H115.042L117.282 41H115.97L114.375 32.925ZM122.768 20L118.61 41H117.298L121.456 20H122.768Z"
+                fill="white"
+              />
+            </svg>
+          </button>
+        </form>
+      </div>
     </section>
     <footer>
+
     </footer>
   </body>
   <script src="./script.js"></script>
