@@ -40,8 +40,16 @@ body {
   overflow: overlay;
 }
 
-header {
 
+body {
+  background-image: url(/assets/backgroundimg.svg);
+  background-repeat: no-repeat;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.links ul li a:hover {
+  color: #00ffff;
 }
 
 ul {
@@ -52,16 +60,18 @@ img {
   max-width: 100%;
 }
 
+.header_logo .logo{
+  display: flex;
+  align-items: flex-start;
+  margin-top: 2rem;
+  padding-left: 2rem;
+}
+
 .wrapper {
   width: min(50rem, 100%);
-  margin-inline: 0.1rem;
-  padding-inline: 2.5rem;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
 }
-
-.wrapper a.logo {
-  align-items: flex-start;
-}
-
 /*Nav===============================================================================*/
 
 .links ul li a {
@@ -77,16 +87,11 @@ img {
 
 form {
   color: #fff;
-
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 
-}
-
-form table tr td {
-  padding: 0;
 }
 
 form table tr td select {
@@ -99,16 +104,34 @@ form table tr td select {
   border: none;
   cursor: pointer;
 }
-
-#comprar:hover {
-  box-shadow: 2.5rem 2.5 5rem #fff;
-}
-
 .selector {
   color: #fff;
-  background-color: #101010;
+  background: none;
   padding: 0.2rem;
   border: none;
+}
+
+option {
+  background-color: #101010;
+}
+
+option::selection {
+  position: absolute;
+  content: "";
+  top: 1.4rem;
+  right: 1rem;
+  width: 0;
+  height: 0;
+  border: 0.6rem solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+
+option:hover {
+  background-color: red;
+}
+
+option:focus {
+  background-color: blue;
 }
 
 @media (min-width: 1024px) {
