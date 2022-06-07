@@ -17,9 +17,11 @@
   color: #fff;
 }
 
+
 html {
   scroll-behavior: smooth;
 }
+
 html,
 body {
   width: 100%;
@@ -29,10 +31,10 @@ body {
 body {
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 20rem;
   
   background: #101010;
-  
+
   font-family: "Extros";
   font-size: 1.6rem;
   text-align: center;
@@ -40,11 +42,15 @@ body {
   overflow: overlay;
 }
 
-
 body {
-  background-image: url(./assets/backgroundimg.svg);
+  /*background-image: url(./assets/backgroundimg.svg);
   background-repeat: no-repeat;
-  object-fit: cover;
+  object-fit: cover;*/
+  z-index: -1;
+}
+
+.background_image {
+  position: absolute;
   z-index: -1;
 }
 
@@ -60,7 +66,7 @@ img {
   max-width: 100%;
 }
 
-.header_logo .logo{
+.header_logo .logo {
   display: flex;
   align-items: flex-start;
   margin-top: 2rem;
@@ -76,7 +82,7 @@ img {
 
 .links ul li a {
   margin-top: 1.5rem;
-  align-items: flex-start;
+  align-items: center;
   display: flex;
   flex-direction: column;
   text-decoration: none;
@@ -91,7 +97,6 @@ form {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
 }
 
 form table tr td select {
@@ -104,6 +109,7 @@ form table tr td select {
   border: none;
   cursor: pointer;
 }
+
 .selector {
   color: #fff;
   background: none;
@@ -126,21 +132,19 @@ option::selection {
   border-color: #fff transparent transparent transparent;
 }
 
-option:hover {
-  background-color: red;
-}
-
-option:focus {
-  background-color: blue;
-}
-
 @media (min-width: 1024px) {
   body {
     overflow: auto;
   }
-
+  .background_image {
+    rotate: 90deg;
+    align-self: center;
+    height: 100vh;
+    width: 100vw;
+  }
   .wrapper {
-    width: min(112rem, 100%);
+    width: min(150rem, 100%);
     display: flex;
+    flex-direction: column;
   }
 }
